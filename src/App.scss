@@ -1,10 +1,29 @@
 @import url("https://fonts.googleapis.com/css?family=Fira+Code|Work+Sans:300,400,500,600,700,800,900&display=swap");
 
 html,
-body {
-  font-family: "Work Sans", sans-serif !important;
+body,
+#root {
+  // font-family: "Work Sans", sans-serif !important;
+  font-family: "Fira Code", monospace !important;
 }
 
-.fira {
-  font-family: "Fira Code", monospace !important;
+// .fira {
+//   font-family: "Fira Code", monospace !important;
+// }
+
+main {
+  min-height: 100vh;
+  position: relative;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+}
+
+.icon-button-delete {
+  cursor: pointer;
+  &:hover {
+    color: red;
+  }
 }

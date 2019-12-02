@@ -7,7 +7,7 @@ import FlameDesign from "../assets/images/flame-design-science.png";
 
 const HomePage = () => (
   <section className="container">
-    <div className="row d-md-flex align-items-center my-md-5">
+    <div className="row d-md-flex align-items-center">
       <div className="col-md-6 order-md-1 order-2">
         <div className="py-md-4">
           <h1 className="font-weight-bold mb-2">Patrick Bradshaw</h1>
@@ -18,7 +18,7 @@ const HomePage = () => (
             Magnam distinctio minima beatae quam excepturi iste illo eaque, ut
             reprehenderit quis!
           </p>
-          <div className="my-md-4 mt-4 mb-5">
+          <div className="my-md-4 mt-4 mb-5 pb-4 pb-md-0">
             <a href="/" className="btn btn-dark mr-1">
               Button #1
             </a>

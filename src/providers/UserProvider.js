@@ -29,7 +29,6 @@ class UserProvider extends Component {
 
   render() {
     const { user } = this.state;
-    console.log("USER", user);
     const { children } = this.props;
 
     return <UserContext.Provider value={user}>{children}</UserContext.Provider>;

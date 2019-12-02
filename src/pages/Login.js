@@ -4,7 +4,11 @@ import { signInWithEmail } from "../firebase";
 import withUser from "../components/withUser";
 
 class LoginPage extends Component {
-  state = { email: "", password: "" };
+  state = { email: "", password: "", from: "/", user: null };
+
+  get locationState() {
+    return this.props.location.state;
+  }
 
   handleChange = e => {
     const { name, value } = e.target;
@@ -14,15 +18,22 @@ class LoginPage extends Component {
   handleSubmit = async e => {
     e.preventDefault();
 
-    const { email, password } = this.state;
+    const { email, password, from } = this.state;
     const { history } = this.props;
     signInWithEmail(email, password, () => {
-      history.push("/");
+      history.push(from);
     });
-    this.setState({ email: "", password: "" });
+    this.setState({ email: "", password: "", from: "/" });
   };
 
   componentDidMount() {
+    if (this.locationState.from) {
+      if (this.locationState.from.pathname !== "/") {
+        let from = this.locationState.from.pathname;
+        this.setState({ from: from });
+      }
+    }
+
     const { user } = this.props;
     if (user) this.setState({ user });
   }

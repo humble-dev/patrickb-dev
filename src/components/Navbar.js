@@ -8,7 +8,7 @@ const Navbar = props => {
 
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-transparent fixed-top border-bottom ">
-      <div className="container">
+      <div className="container-fluid">
         <Link className="navbar-brand fira" to="/">
           {`{PB}`}
         </Link>
@@ -27,10 +27,24 @@ const Navbar = props => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ml-auto mr-2">
             <li className="nav-item">
-              <Link className="nav-link" to="/protected">
-                Protected Page
+              <Link className="nav-link" to="/thoughts">
+                Thoughts
               </Link>
             </li>
+            {user ? (
+              <>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/admin">
+                    Admin
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/protected">
+                    Protected
+                  </Link>
+                </li>
+              </>
+            ) : null}
           </ul>
           <form className="form-inline my-2 my-lg-0">
             {user ? (
