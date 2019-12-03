@@ -31,6 +31,11 @@ const Navbar = props => {
                 Thoughts
               </Link>
             </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/blocks">
+                Blocks
+              </Link>
+            </li>
             {user ? (
               <>
                 <li className="nav-item">

@@ -6,6 +6,7 @@ import "./assets/fontawesome/css/all.css";
 import { ProtectedRoute } from "./components/ProtectedRoute";
 import UserProvider from "./providers/UserProvider";
 import ThoughtsProvider from "./providers/ThoughtsProvider";
+import BlocksProvider from "./providers/BlocksProvider";
 import ScrollToTop from "./components/scrollToTop";
 
 import Navbar from "./components/Navbar"; // eslint-disable-line no-use-before-define
@@ -16,43 +17,50 @@ import LoginPage from "./pages/Login";
 import ProtectedPage from "./pages/Protected";
 import AdminPage from "./pages/Admin";
 import ThoughtStreamPage from "./pages/ThoughtStream";
+import BlockStream from "./pages/BlockStream";
 
 function App() {
   return (
     <BrowserRouter>
       <UserProvider>
-        <ThoughtsProvider>
-          <Switch>
-            <Route path="/login">
-              <LoginPage />
-            </Route>
+        <BlocksProvider>
+          <ThoughtsProvider>
+            <Switch>
+              <Route path="/login">
+                <LoginPage />
+              </Route>
 
-            <ScrollToTop>
-              <Navbar />
-              <main>
-                <div style={{ paddingTop: 57, paddingBottom: 67.2 }}>
-                  <Switch>
-                    <Route exact path="/">
-                      <HomePage />
-                    </Route>
+              <ScrollToTop>
+                <Navbar />
+                <main>
+                  <div style={{ paddingTop: 57, paddingBottom: 67.2 }}>
+                    <Switch>
+                      <Route exact path="/">
+                        <HomePage />
+                      </Route>
 
-                    <Route path="/thoughts">
-                      <ThoughtStreamPage />
-                    </Route>
+                      <Route path="/blocks">
+                        <BlockStream />
+                      </Route>
 
-                    <ProtectedRoute
-                      path="/protected"
-                      component={ProtectedPage}
-                    />
+                      <Route path="/thoughts">
+                        <ThoughtStreamPage />
+                      </Route>
 
-                    <ProtectedRoute path="/admin" component={AdminPage} />
-                  </Switch>
-                </div>
-                <Footer />
-              </main>
-            </ScrollToTop>
-          </Switch>
-        </ThoughtsProvider>
+                      <ProtectedRoute
+                        path="/protected"
+                        component={ProtectedPage}
+                      />
+
+                      <ProtectedRoute path="/admin" component={AdminPage} />
+                    </Switch>
+                  </div>
+                  <Footer />
+                </main>
+              </ScrollToTop>
+            </Switch>
+          </ThoughtsProvider>
+        </BlocksProvider>
       </UserProvider>
     </BrowserRouter>
   );

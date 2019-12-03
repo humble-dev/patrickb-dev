@@ -10,7 +10,7 @@ const ThoughtStreamPage = () => {
   const user = useContext(UserContext);
   const thoughts = useContext(ThoughtsContext);
 
-  console.log("Rendered ThoStre", thoughts);
+  // console.log("Rendered ThoStre", thoughts);
 
   return (
     <section className="container py-5">

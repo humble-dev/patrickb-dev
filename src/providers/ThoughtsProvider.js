@@ -27,7 +27,7 @@ class ThoughtsProvider extends Component {
     const { thoughts } = this.state;
     const { children } = this.props;
 
-    console.log("rendered ThoPro", thoughts);
+    // console.log("rendered ThoPro", thoughts);
 
     return (
       <ThoughtsContext.Provider value={thoughts}>
