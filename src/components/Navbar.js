@@ -7,7 +7,7 @@ const Navbar = props => {
   const user = useContext(UserContext);
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-transparent fixed-top border-bottom ">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top border-bottom border-light">
       <div className="container-fluid">
         <Link className="navbar-brand fira" to="/">
           {`{PB}`}
@@ -54,7 +54,7 @@ const Navbar = props => {
           <form className="form-inline my-2 my-lg-0">
             {user ? (
               <button
-                className="btn btn-sm btn-outline-dark my-1 ml-md-1 mr-md-1 mr-2"
+                className="btn btn-sm btn-outline-light my-1 ml-md-1 mr-md-1 mr-2"
                 onClick={() => {
                   signOut(() => {
                     props.history.push("/");
@@ -65,7 +65,7 @@ const Navbar = props => {
               </button>
             ) : (
               <Link
-                className="btn btn-sm btn-outline-dark my-2 my-sm-0"
+                className="btn btn-sm btn-outline-light my-2 my-sm-0"
                 to={{
                   pathname: "/login",
                   state: {
