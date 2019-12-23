@@ -93,6 +93,10 @@ $light:         $gray-300 !default;
 $dark:          $black !default;
 $accent:        $black;
 
+// Rustic Rentals
+$rustic-primary: lighten(#8bbabb, 10%);
+$rustic-dark: #232020;
+
 $theme-colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $theme-colors: map-merge(
@@ -105,7 +109,9 @@ $theme-colors: map-merge(
     "danger":     $danger,
     "light":      $light,
     "dark":       $dark,
-    "accent":     $accent
+    "accent":     $accent,
+    "rustic-primary": $rustic-primary,
+    "rustic-dark": $rustic-dark
   ),
   $theme-colors
 );

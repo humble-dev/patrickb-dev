@@ -1,0 +1,14 @@
+#rusticrentals {
+  @import url("https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,700,700i&display=swap");
+  @import url("https://fonts.googleapis.com/css?family=Eczar:400,500,600,700&display=swap");
+
+  font-family: "EB Garamond", serif !important;
+  // font-family: "Eczar", serif !important;
+  .sans {
+    font-family: sans-serif !important;
+  }
+}
+
+.react-images__header.react-images__header--isModal {
+  top: 57px !important;
+}

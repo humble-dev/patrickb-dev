@@ -19,7 +19,7 @@ const Thought = ({ thought, date, id }) => {
         </div>
         <div className="Buttons">
           {user ? (
-            <span role="buton" className="icon-button-delete" onClick={remove}>
+            <span role="button" className="icon-button-delete" onClick={remove}>
               <i className="far fa-trash-alt" />
             </span>
           ) : null}

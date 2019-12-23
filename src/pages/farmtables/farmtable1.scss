@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css?family=Ibarra+Real+Nova|Montserrat|Playfair+Display|Raleway|Solway&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Great+Vibes|Yellowtail&display=swap");
+
+// font-family: 'Ibarra Real Nova', serif;
+// font-family: 'Solway', serif;
+// font-family: 'Raleway', sans-serif;
+// font-family: 'Montserrat', sans-serif;
+// font-family: 'Playfair Display', serif;
+#farmtables {
+  .fancy {
+    font-family: "Ibarra Real Nova", serif !important;
+  }
+
+  .scripty {
+    font-family: "Great Vibes", cursive;
+  }
+
+  body,
+  .my-sans {
+    // font-family: 'Montserrat', sans-serif !important;
+    font-family: "Raleway", sans-serif !important;
+  }
+
+  .my-serif {
+    font-family: "Ibarra Real Nova", serif !important;
+  }
+
+  .boxtext {
+    border: 1px solid silver;
+    padding-left: 1.5rem;
+    padding-right: 0.5rem;
+    letter-spacing: 1rem;
+    color: silver;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .-center-all {
+    > div {
+      text-align: center;
+      h3 {
+        font-size: 20px !important;
+        margin-top: 20px !important;
+        font-family: "Ibarra Real Nova", serif !important;
+        // text-transform: uppercase;
+      }
+      p {
+        margin-bottom: 30px;
+        font-size: 16px;
+        opacity: 0.8;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .mapdiv,
+    .mapdiv > div > div {
+      height: 400px;
+    }
+  }
+}

@@ -18,6 +18,10 @@ import ProtectedPage from "./pages/Protected";
 import AdminPage from "./pages/Admin";
 import ThoughtStreamPage from "./pages/ThoughtStream";
 import BlockStream from "./pages/BlockStream";
+import ExperimentView from "./pages/Experiment.View";
+
+import FarmTable1 from "./pages/farmtables/farmtable1";
+import RusticRentals from "./pages/farmtables/RusticRentals";
 
 function App() {
   return (
@@ -26,14 +30,18 @@ function App() {
         <BlocksProvider>
           <ThoughtsProvider>
             <Switch>
+              <Route path="/farmtables" component={FarmTable1} />
+              <Route path="/rusticrentals" component={RusticRentals} />
+              <Route path="/experiments" component={ExperimentView} />
+
               <Route path="/login">
                 <LoginPage />
               </Route>
 
               <ScrollToTop>
-                <Navbar />
                 <main>
-                  <div style={{ paddingTop: 57, paddingBottom: 67.2 }}>
+                  <Navbar />
+                  <div id="content" style={{ paddingTop: 57 }}>
                     <Switch>
                       <Route exact path="/">
                         <HomePage />

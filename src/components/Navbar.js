@@ -25,33 +25,38 @@ const Navbar = props => {
         </button>
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav ml-auto mr-2">
+          {/* <ul className="navbar-nav ml-auto mr-2">
             <li className="nav-item">
               <Link className="nav-link" to="/thoughts">
                 Thoughts
               </Link>
             </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/blocks">
-                Blocks
+            <li className="nav-item dropdown">
+              <Link className="nav-link dropdown-toggle" data-toggle="dropdown">
+                Menu
               </Link>
+              <div className="dropdown-menu">
+                <Link className="dropdown-item" to="/blocks">
+                  Blocks
+                </Link>
+                {user ? (
+                  <>
+                    <Link className="dropdown-item" to="/admin">
+                      Admin
+                    </Link>
+                    <Link className="dropdown-item" to="/protected">
+                      Protected
+                    </Link>
+                    <div className="dropdown-divider"></div>
+                    <Link className="dropdown-item" to="/experiments">
+                      EXPERIMENTS
+                    </Link>
+                  </>
+                ) : null}
+              </div>
             </li>
-            {user ? (
-              <>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/admin">
-                    Admin
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/protected">
-                    Protected
-                  </Link>
-                </li>
-              </>
-            ) : null}
-          </ul>
-          <form className="form-inline my-2 my-lg-0">
+          </ul> */}
+          <form className="form-inline ml-auto">
             {user ? (
               <button
                 className="btn btn-sm btn-outline-light my-1 ml-md-1 mr-md-1 mr-2"

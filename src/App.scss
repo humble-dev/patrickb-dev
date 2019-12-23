@@ -2,31 +2,37 @@
 
 @import url("https://fonts.googleapis.com/css?family=Solway:300,400,500,700,800&display=swap");
 
-html,
-body,
-#root {
-  // font-family: "Work Sans", sans-serif !important;
-  // font-family: "Fira Code", monospace !important;
-  font-family: "Solway", serif !important;
-}
-
-.fira {
-  font-family: "Fira Code", monospace !important;
-}
-
 main {
-  min-height: 100vh;
-  position: relative;
-}
+  // font-family: "Work Sans", sans-serif !important;
+  font-family: "Fira Code", monospace !important;
+  // font-family: "Solway", serif !important;
 
-footer {
-  position: absolute;
-  bottom: 0;
-}
+  .solway {
+    font-family: "Solway", serif !important;
+  }
 
-.icon-button-delete {
-  cursor: pointer;
-  &:hover {
-    color: red;
+  .work-sans {
+    font-family: "Work Sans", sans-serif !important;
+  }
+
+  .fira {
+    font-family: "Fira Code", monospace !important;
+  }
+
+  main #content {
+    min-height: 100vh;
+    position: relative;
+  }
+
+  // footer {
+  //   position: absolute;
+  //   bottom: 0;
+  // }
+
+  .icon-button-delete {
+    cursor: pointer;
+    &:hover {
+      color: red;
+    }
   }
 }
