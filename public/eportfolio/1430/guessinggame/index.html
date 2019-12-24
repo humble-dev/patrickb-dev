@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>A Haunted Guessing Game</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body
+            {
+                background-image: url("blackbg.jpg");
+                color: white;
+                text-align: center;
+            }
+            form
+            {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            div.main
+            {
+                position: absolute;
+                margin: auto;
+                left: 0;
+                right: 0;
+                width: 500px;
+                margin-top: 10px;
+                background-color: black;
+                color: orangered;
+                border: 3px double white;
+                padding: 10px;
+                text-align: center;
+                font-size: medium;
+            }
+        </style>
+        <script>
+            var theNumber = 0;
+            var thePictureNumber = 1;
+            var message = "Hello";
+            var name = prompt("What is your name? ", "");
+            
+            document.write("<h2>" + message + " " + name + ", are you afraid?");
+            
+            function initialize()
+            {
+//                theNumber = 42;
+                theNumber = Math.random();
+                theNumber = theNumber * 100;
+                theNumber = Math.floor(theNumber);
+                
+                document.guessForm.userInput.focus();
+                document.guessForm.userInput.select();
+            }
+            
+            function checkGuess()
+            {
+                var userGuess = eval(document.guessForm.userGuess.value);
+                if (theNumber === userGuess)
+                {
+                    alert(name + " YOU GOT IT!!!");
+                    refreshID = setInterval("changePicture()", 3000);
+                }
+                else
+                {
+                    if (userGuess > theNumber)
+                    {
+                        alert (name + ", you are too high, you are surrounded by bats!!!");
+                        document.thePicture.src = "toohigh.gif"
+                    } else {
+                        alert(name + ", you are too low, you see a zombie come out of the ground!!!");
+                        document.thePicture.src = "toolow.gif"
+                    }
+                }
+                document.guessForm.userInput.focus();
+                document.guessForm.userInput.select();
+            }
+            
+            function changePicture()
+            {
+                if (thePictureNumber === 1)
+                    document.thePicture.src = "1.gif";
+                if (thePictureNumber === 2)
+                    document.thePicture.src = "3.gif";
+                if (thePictureNumber === 3)
+                    document.thePicture.src = "4.gif";
+                if (thePictureNumber === 4)
+                    document.thePicture.src = "6.gif";
+                thePictureNumber++;
+                if (thePictureNumber > 4)
+                    thePictureNumber = 1;
+            }
+            
+            function stopInterval()
+            {
+                document.guessForm.thePicture.src = "basementdoor.jpg";
+                clearInterval(refreshID);
+                clearInterval();
+                document.guessForm.userGuess.value = "";
+                initialize();
+            }
+        </script>
+    </head>
+    <body onLoad="initialize()">
+        <div class="main">
+            <h1>A Haunted Guessing Game</h1>
+            <p>
+                If you dare: guess a number between 1 and 99.<br>
+                if you are correct, the door will open...
+            </p>
+
+            <form name='guessForm' action="javascript:checkGuess()">
+                Your Guess: <input type='text' name='userGuess' value='0' size='10' maxlength='2'>
+                <br><br>
+
+                <input type='button' value='Take A Guess' onClick='checkGuess()'>
+                <input type='button' value='Reset the Form' onClick='stopInterval()'>
+
+                <br><br>
+
+                <img src='basementdoor.jpg' name='thePicture' style='width:350px'>
+                <br>
+                <p>Unspeakable horrors await...</p>
+            </form>
+        </div>
+    </body>
+</html>

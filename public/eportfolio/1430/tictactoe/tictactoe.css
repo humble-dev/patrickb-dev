@@ -1,0 +1,71 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 24, 2017, 9:43:21 AM
+    Author     : patrick
+*/
+
+@font-face{
+    font-family: "ArcadeAlternate";
+    src: url('ArcadeAlternate.ttf');
+}
+
+body{
+    background-image: url("purpleskybg.jpg");
+    text-align: center;
+}
+
+fieldset{
+    
+}
+
+.winnerbox{
+    
+}
+
+.Row{
+    display: table-row;
+}
+
+.cell{
+    display: table-cell;
+    border: dashed yellow;
+    position: static;
+    border-width: thin;
+    padding-left: 0px;
+    padding-right: 0px;
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    font-size: 40px;
+    vertical-align: middle;
+}
+
+.gamebox{
+    background-image: url("overviewpanel.png");
+    width: 300px ;
+    margin-left: auto;
+    margin-right: auto;
+    border: lavender double 8px;
+    padding: 20px;
+}
+
+.gamepiece{
+    width: 85px;
+    vertical-align: middle;
+}
+
+.avatar{
+    width: 50%;
+}
+
+table {
+    font-family: ArcadeAlternate;
+    color: yellow;
+    font-size: medium;
+    width: 400px;
+    text-align: center;
+}

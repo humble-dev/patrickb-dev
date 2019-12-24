@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Pizza Example</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            html, body {
+                margin: 0;
+                padding: 0;
+                font-size: large;
+                font-family: san-serif;
+            }
+            body {
+                background-image: url("img/drawnbg.jpg");
+            }
+            table {
+                margin-left: auto;
+                margin-right: auto;
+                text-align: left;
+            }
+            fieldset {
+                display:inline;
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+            div.main {
+                background-color: salmon;
+                opacity: 0.97;
+                border: 12px hotpink double;
+                padding: 32px;
+                margin-left: 80px;
+                margin-right: 80px;
+                margin-top: 15px;
+                margin-bottom: 80px;
+                border-radius: 20px;
+            }
+            div.top {
+                width: 100%;
+                padding: 5px;
+                margin-left: 0px;
+                margin-right: 0px;
+                margin-top: 40px;
+                text-align: center;
+            }
+            .right {
+                text-align: right;
+            }
+            .img-rounded
+            {
+                border-radius: 20px;
+                vertical-align: middle;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="top">
+            <img src="img/banner.png" alt="truth">
+        </div>
+        <div class="main">
+            <form name='orderForm' action="MAILTO:patrick.j.bradshaw@gmail.com?subject=Make me a pizza!" target="_blank" method="post" enctype='text/plain'>
+                <table style="width:100%">
+                    <tr>
+                        <td style="width:50%"><b>YOUR INFO:</b></td>
+                        <td style="width:50%" rowspan="7">
+                            <img class="img-rounded" src="img/plainhappy.gif" alt="doodleloop" style="width:500px">
+                            <br><br>
+                            <p class="right">
+                                <b>SPECIAL REQUESTS:</b>
+                                <textarea width=500px rows="6" cols="60" name="Customer Request">What more could you want from Tasty's? </textarea><br>
+                                <input type="button" onclick="alert('Did they steal a pizza your heart?')" value="Am I in love?">
+                                <input type="reset">
+                                <input type="submit" value="Submit">
+                            </p>
+                        </td>
+                    <tr>
+                        <td>
+                            <input type="text" name="firstName" maxlength="30" size="70" placeholder='Your first & last name'><br>
+                            <input type="text" name="address" maxlength="40" size="70" placeholder="Your address"><br>
+                            <input type="text" name="phone" size="70" placeholder='Your phone number'><br>
+                            <input type="text" name="email" size="70" placeholder='Your email address'><br><br>
+                        </td>
+                        <td>&nbsp;</td>
+                    <tr>
+                        <td>
+                            <b>How do you want it?</b> &nbsp;
+                            <input type="radio" name="Delivery?" value=" delivery"> Delivery &nbsp;
+                            <input type="radio" name="Delivery?" value=" carry-out" checked> Carry-out &nbsp;
+                            <br><br>
+                        </td>
+                        <td>&nbsp;</td>
+                    </tr>
+
+                    <tr>
+                        <!- -Pizza Size radio buttons- - ->
+                        <td><b>SIZE:</b></td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="Size" value=" personal"> Personal &nbsp;
+                            <input type="radio" name="Size" value=" small"> Small &nbsp;
+                            <input type="radio" name="Size" value=" medium"> Medium &nbsp;
+                            <input type="radio" name="Size" value=" large" checked> Large &nbsp;
+                            <input type="radio" name="Size" value=" family"> Family &nbsp;
+                            <br><br>
+                        </td>
+                        <td>&nbsp;</td>
+                    </tr>
+
+                    <tr>
+                        <!- - Pizza Crust drop down selections - ->
+                        <td>
+                            <b>CRUST:</b>
+                            <select name="Crust">
+                                <option value="Thin">Thin-crust</option>
+                                <option value="Hand-Tossed" selected>Hand-tossed</option>
+                                <option value="Flatbread">Flatbread</option>
+                                <option value="Deep-dish">Deep-dish</option>
+                                <option value="Focaccia">Focaccia</option>
+                                <option value="Stuffed">Cheese-stuffed</option>
+                            </select>
+                            &nbsp;&nbsp;
+                            <!- - Pizza Sauce drop down selections- ->
+                            <b>SAUCE:</b>
+                            <select name="Sauce">
+                                <option value="Marinara">Marinara</option>
+                                <option value="Alfredo">Alfredo</option>
+                                <option value="BBQ">BBQ</option>
+                                <option value="Pesto">Pesto</option>
+                                <option value="Pumpkin">Pumpkin</option>
+                                <option value="Sun-dried Tomato">Sun-dried Tomato</option>
+                            </select>
+                        </td>
+                        <td>&nbsp;</td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <!- -Pizza Topping check box selection - - ->
+                            <fieldset>
+                                <legend><b>TOPPINGS:</b></legend>
+                                <table>
+                                    <tr>
+                                        <td><input type="checkbox" name="toppings" value="pepperoni" checked> Pepperoni</td>
+                                        <td><input type="checkbox" name="toppings" value="sausage"> Sausage</td>
+                                        <td><input type="checkbox" name="toppings" value="chicken"> Chicken</td>
+                                        <td><input type="checkbox" name="toppings" value="anchovies"> Anchovies</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" name="toppings" value="bacon"> Bacon</td>
+                                        <td><input type="checkbox" name="toppings" value="pineapple"> Pineapple</td>
+                                        <td><input type="checkbox" name="toppings" value="peppers"> Peppers</td>
+                                        <td><input type="checkbox" name="toppings" value="onion"> Onion</td>
+                                    </tr>
+                                        <td><input type="checkbox" name="toppings" value="olives"> Olives</td>
+                                        <td><input type="checkbox" name="toppings" value="oreos"> Oreos</td>
+                                        <td><input type="checkbox" name="toppings" value="t-rex meat"> T-rex meat</td>
+                                        <td><input type="checkbox" name="toppings" value="cereal"> Cereal</td>
+                                    <tr>
+                                        <td><input type="checkbox" name="toppings" value="squid"> Squid</td>
+                                        <td><input type="checkbox" name="toppings" value="catfood"> Catfood</td>
+                                        <td><input type="checkbox" name="toppings" value="basil"> Basil</td>
+                                        <td><input type="checkbox" name="toppings" value="tomato"> Tomato</td>
+
+                                    </tr>
+                                </table>
+                            </fieldset>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </body>
+</html>

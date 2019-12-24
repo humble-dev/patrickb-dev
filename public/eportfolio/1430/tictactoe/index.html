@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TIC-TAC-TOE</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="tictactoe.css">
+        <script>
+            var names = ["", ""];
+            var xGameTotal = 0;
+            var oGameTotal = 0;
+            var gameOver = false;
+            var xWins = 0;
+            var oWins = 0;
+            var catWins = 0;
+            var filledSpaces = 0;
+            var currentPlayer = "X";
+            var winsArray = [7, 56, 73, 84, 146, 273, 292, 448];
+            
+            function getNames() {
+                names[0] = prompt("Thou valiant knight, what is thy name?");
+                names[1] = prompt("Hideous beast, what what wouldst thou be called?");
+                document.getElementById("knightname").innerHTML = names[0];
+                document.getElementById("dragonname").innerHTML = names[1];
+            }
+            
+            function playerMoved(id, value) {
+
+                changeMarker(id);
+                updatePlayerTotal(value);
+                gameOver = false;
+
+                if (checkWinner(xGameTotal)) {
+                    xWins++;
+                    resetBoard();
+                }
+
+                if (checkWinner(oGameTotal)) {
+                    oWins++;
+                    resetBoard();
+                }
+
+                if (oGameTotal + xGameTotal === 511 | filledSpaces === 9) {
+                    catWins++;
+                    resetBoard();
+                }
+
+                switchPlayers();
+            } // end playerMoved
+            
+            function changeMarker(box) {
+		if (box.innerHTML === '<img class="gamepiece" src="knightX.png" alt="X">' | box.innerHTML === '<img class="gamepiece" src="dragonO.png" alt="O">')
+                    return;
+		if (box.innerHTML === "") {
+                    if (currentPlayer === "X") {
+                        box.innerHTML = '<img class="gamepiece" src="knightX.png" alt="X">';
+			filledSpaces++
+                    }
+                    else {
+                        box.innerHTML = '<img class="gamepiece" src="dragonO.png" alt="O">';
+                        filledSpaces++;
+                    }
+		}
+            } // end changeMarker
+            
+            function switchPlayers() {
+                if (currentPlayer === "X")
+                    currentPlayer = "O";
+                else
+                    currentPlayer = "X";
+            } // end switchPlayers
+            
+            function updatePlayerTotal(score) {
+                if (currentPlayer === "X")
+                    xGameTotal += score;
+                else
+                    oGameTotal += score;
+            }
+            
+            function checkWinner(score) {
+                //Return whether the given score is a winning score
+                for (var i = 0; i < winsArray.length; i++) {
+                    //compare the winsArray occurance bitwise to the current score
+                    if ((winsArray[i] & score) === winsArray[i])
+                        return true; //bitwise match - we have a winner!
+                }
+                return false;
+            } // end checkWinner
+
+            function resetBoard() {
+                var board = document.getElementsByClassName('cell');
+                
+                for (var i = 0; i < board.length; i++) { 
+                    board[i].innerHTML = ""; 
+                }
+                
+                oGameTotal = 0;
+                xGameTotal = 0;
+                filledSpaces = 0;
+                
+                document.getElementById("knightwins").innerHTML = "has " + xWins + " wins";
+                document.getElementById("dragonwins").innerHTML = "has " + oWins + " wins";
+                document.getElementById("wizardwins").innerHTML = "has " + catWins + " wins";
+                gameOver = true;
+            } // end of resetBoard
+        </script>
+    </head>
+
+    <body onload="getNames();">
+        <img src="gamelogo.png" alt="logo" style='width:640px'>
+        
+        <br><br>
+        
+        <div class="gamebox">
+            <div class='Row'>
+                <div class='cell' onClick='playerMoved(this, 1)'></div>
+                <div class='cell' onClick='playerMoved(this, 2)'></div>
+                <div class='cell' onClick='playerMoved(this, 4)'></div>
+            </div>
+            <div class='Row'>
+                <div class='cell' onClick='playerMoved(this, 8)'></div>
+                <div class='cell' onClick='playerMoved(this, 16)'></div>
+                <div class='cell' onClick='playerMoved(this, 32)'></div>
+            </div>
+            <div class='Row'>
+                <div class='cell' onClick='playerMoved(this, 64)'></div>
+                <div class='cell' onClick='playerMoved(this, 128)'></div>
+                <div class='cell' onClick='playerMoved(this, 256)'></div>
+            </div>
+        </div>
+        
+        <br>
+        
+        <center>
+        <div class='winnerbox'>
+            <table>
+                <tr>
+                    <td><img class='avatar' src="knightX.png" alt='knight'></td>
+                    <td><img class='avatar' src="dragonO.png" alt='dragon'></td>
+                    <td><img class='avatar' src="wizard.png" alt='wizard'></td>
+                </tr>
+                <tr>
+                    <td><p id="knightname"></p><p id="knightwins"></p></td>
+                    <td><p id="dragonname"></p><p id="dragonwins"></p></td>
+                    <td><p>Radagast</p><p id="wizardwins"></p></td>
+                </tr>
+            </table>
+        </div>
+        </center>
+    </body>
+</html>

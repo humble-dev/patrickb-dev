@@ -80,7 +80,7 @@ const ProjectArray = [
     thumb: thumbOthello
   },
   {
-    title: "Programming Strides",
+    title: '"Programming Strides"',
     description:
       "My original portfolio that was featured in a school-wide show case. I think it displays my deep interest in code and design, as well the creativity with which I approach development.",
     link: "/eportfolio",

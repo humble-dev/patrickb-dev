@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Simply Patrick</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Overpass|Permanent+Marker" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <style>
+        @font-face{
+            Font-Family: 'Permanent Marker', Cursive;
+            Font-Size: 55px;
+            Font-Family: 'Overpass', Sans-Serif;
+            Font-Size: 17px;
+        }
+        h3 {
+            Font-Family: 'Permanent Marker', Cursive;
+            Font-Size: 60px;
+        }
+        .hcaption {
+            font-size: 35px;
+            color: white;
+        }
+        p {
+            Font-Family: 'Overpass', Sans-Serif;
+            Font-Size: 20px;
+            line-height: 2.4;
+        }
+        .pcaption {
+            font-size: 24px;
+            color: white;
+        }
+        .bg-1 { 
+            background-image: url("images/green.jpeg");
+            background-color: #588c7e; /* Green */
+            color: #f2e394; /* Yellow */
+        }
+        .bg-2 { 
+            background-color: #f2e394; /* Yellow */
+            color: #d96459; /* Red */
+        }
+        .bg-3 { 
+            background-color: #f2ae72; /* Orange */
+            color: #588c7e; /* Green */
+        }
+        .container-fluid {
+            padding-top: 70px;
+            padding-bottom: 70px;
+        }
+        .navbar {
+            padding-top: 0px;
+            padding-bottom: 0px;
+            border: 0;
+            border-radius: 0;
+            margin-bottom: 0;
+            font-size: 18px;
+            letter-spacing: 5px;
+            background-color: #8c4646;
+        }
+        .navbar.navbar-default.navbar-fixed-top li a {
+            Font-Family: 'Overpass', Sans-Serif;
+            Font-Size: 17px;
+            color: #f2e394; /* Yellow */
+        }
+        .navbar-default .navbar-brand {
+            Font-Family: 'Permanent Marker', Cursive;
+            Font-Size: 24px;
+            color: #f2e394; /* Yellow */
+        }
+        .navbar-default .navbar-brand:hover {
+            color: #f2ae72 !important; /* Orange */
+        }
+        .navbar-nav li a:hover {
+            color: #f2ae72 !important; /* Orange */
+        }
+        .bg-4 { 
+            background-color: #8c4646; /* Dark red */
+            color: #f2e394; /* Yellow */
+        }
+        .img-rounded {
+            width: 100%;
+        }
+    </style>
+    <body>
+
+        <!-- navbar -->
+        
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span> 
+                    </button>
+                    <a class="navbar-brand" href="http://ec2-54-149-207-42.us-west-2.compute.amazonaws.com/index.html">Patrick Bradshaw</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#who">WHO I AM</a></li>
+                        <li><a href="#where">WHERE I'VE BEEN</a></li>
+                        <li><a href="#how">HOW TO REACH ME</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav> <!-- end navbar -->
+        
+        
+        
+        
+        
+        <!-- section 1 -->
+        
+        <div id="who" class="container-fluid bg-1 text-center">
+            <h3>Who am I?</h3>
+            <br>
+            <img src="images/stampface.jpg" class="img-responsive img-circle" style="display:inline; width:400px" alt="stamp">
+            <br><br>
+            <p>My name is Patrick Bradshaw.<br>I am a student at SLCC.<br>
+                I think of myself as an artist, musician, <br>photographer, web &
+                software developer<br>and storyteller, among other things.
+                <br>I am an ideas man!
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        <!-- section 2 -->
+
+        <div id="where" class="container-fluid bg-2 text-center">
+            <h3>Where have I been?</h3>
+            <p>I've been places, man!<br>Here are some recent photographs:</p>
+
+            <!-- start carousel -->
+            <div id="myCarousel" class="carousel slide center-block" style="width:90%" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                    <li data-target="#myCarousel" data-slide-to="4"></li>
+                    <li data-target="#myCarousel" data-slide-to="5"></li>
+                    <li data-target="#myCarousel" data-slide-to="6"></li>
+                    <li data-target="#myCarousel" data-slide-to="7"></li>
+                    <li data-target="#myCarousel" data-slide-to="8"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img class="img-rounded" src="images/oversaltlake.jpg" alt="Over Salt Lake">
+                        <div class="carousel-caption">
+                            <h3 class="hcaption">Above the Great Salt Lake!</h3>
+                            <p class="pcaption">Close to home.</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img class="img-rounded" src="images/capitolreef.jpg" alt="Capitol Reef">
+                        <div class="carousel-caption">
+                            <h3 class="hcaption">Capitol Reef, Utah</h3>
+                            <p class="pcaption">Our favorite National Park.</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img class="img-rounded" src="images/antelopeisland.jpg" alt="Antelope Island">
+                        <div class="carousel-caption">
+                            <h3 class="hcaption">Antelope Island, Utah</h3>
+                            <p class="pcaption">This is not an antelope.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="item">
+                        <img class="img-rounded" src="images/redbuttegarden.jpg" alt="Red Butte Garden">
+                        <div class="carousel-caption">
+                            <h3 class="hcaption">Red Butte Garden, Salt Lake City</h3>
+                            <p class="pcaption">Busy little duck pond within the garden.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="item">
+                        <img class="img-rounded" src="images/oregonlighthouse.jpg" alt="Oregon Coast">
+                        <div class="carousel-caption">
+                            <h3 class="hcaption">Oregon Coast Lighthouse, Oregon</h3>
+                            <p class="pcaption">These are scattered throughout the Oregon coast.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="item">
+                        <img class="img-rounded" src="images/grandcanyon.jpg" alt="Grand Canyon">
+                        <div class="carousel-caption">
+                            <h3 class="hcaption">Grand Canyon North Rim, Arizona</h3>
+                            <p class="pcaption">I couldn't see the bottom.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="item">
+                        <img class="img-rounded" src="images/manitou.jpg" alt="Manitou">
+                        <div class="carousel-caption">
+                            <h3 class="hcaption">Manitou, Bainbridge Island, Washington</h3>
+                            <p class="pcaption">My old neighborhood.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="item">
+                        <img class="img-rounded" src="images/eagleharbor.jpg" alt="Eagle Harbor">
+                        <div class="carousel-caption">
+                            <h3 class="hcaption">Eagle Harbor, Washington</h3>
+                            <p class="pcaption">My hometown.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="item">
+                        <img class="img-rounded" src="images/rainier.jpg" alt="Rainier">
+                        <div class="carousel-caption">
+                            <h3 class="hcaption">Over Mount Ranier, Washington</h3>
+                            <p class="pcaption">"I was standing next to a mountain" - Hendrix</p>
+                        </div>
+                    </div>
+                    
+                </div> <!-- end of carousel image array -->
+
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div> <!-- end carousel -->
+        </div>
+        
+        
+        
+        <!-- section 3 -->
+
+        <div id="how" class="container-fluid bg-3 text-center"> 
+            <br>
+            <img src="images/contact.jpg" class="img-circle" style="width:280px;">
+            <br>
+            
+            <h3>How to reach me:</h3>
+            <div class="row">
+                <div class="col-sm-2">
+                </div>
+                
+                <div class="col-sm-4">
+                    <br><p><span class="glyphicon glyphicon-camera"></span>  INSTAGRAM | <a href='https://www.instagram.com/pjbradshaw_hi/'>pjbradshaw_hi</a></p>
+                    <p><span class="glyphicon glyphicon-user"></span>  FACEBOOK | <a href='https://www.facebook.com/patrick.bradshaw.731'>patrick.bradshaw.731</a></p>
+                    <p><span class="glyphicon glyphicon-headphones"></span>  BANDCAMP | <a href='https://patrickbradshaw.bandcamp.com/'>patrickbradshaw</a></p>
+                </div>
+                
+                
+                <div class="col-sm-4">
+                    <br><p><span class="glyphicon glyphicon-phone"></span>  MOBILE | (206) 290.6870</p>
+                    <p><span class="glyphicon glyphicon-briefcase"></span>  LINKEDIN | <a href='https://www.linkedin.com/in/grandpatrick/'>grandpatrick</a></p>
+                    <p><span class="glyphicon glyphicon-facetime-video"></span>  YOUTUBE | <a href='https://www.youtube.com/user/patrizzick'>patrizzick</a></p>
+                    
+                </div>
+                
+                <div class="col-sm-2">
+                </div>
+            </div>
+            <br>
+            <button type="button" class="btn btn-lg"><a href='mailto:patrick.j.bradshaw@gmail.com'>
+                    <span class="glyphicon glyphicon-envelope"></span> Email me</a></button>
+        </div>
+    </body>
+
+    
+    
+    
+    
+    <footer class="container-fluid bg-4 text-center">
+        <p>Bootstrap Theme Made By <a href="https://www.w3schools.com">www.w3schools.com</a></p> 
+    </footer>

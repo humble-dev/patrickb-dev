@@ -1,0 +1,168 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 20, 2017, 11:47:06 AM
+    Author     : patrick
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Concert+One|Monoton|Permanent+Marker');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+    color: #111111;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.8em;
+    line-height: 1.8;
+}
+h3, h4 {
+    font-family: 'Monoton', cursive;
+    margin: 10px 0 30px 0;
+    letter-spacing: 7px;      
+    font-size: 37px;
+    color: #111;
+}
+.container {
+    padding: 80px 120px;
+}
+.person {
+    border: 10px solid transparent;
+    margin-bottom: 25px;
+    width: 80%;
+    height: 80%;
+    opacity: 0.7;
+}
+.person:hover {
+    border-color: #f1f1f1;
+}
+.carousel-inner img {
+    -webkit-filter: grayscale(50%);
+    filter: grayscale(50%); /* make all photos black and white */ 
+    width: 100%; /* Set width to 100% */
+    margin: auto;
+}
+.carousel-caption h3 {
+    color: #fff !important;
+}
+@media (max-width: 600px) {
+    .carousel-caption {
+        display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+}
+.bg-1 {
+    background: #F012BE;
+    background-image: url("resources/stars1.jpeg");
+    min-height: 100%;
+    color: #85144b;
+}
+.bg-1 h3 {color: #fff;}
+.bg-1 p {font-style: italic;}
+.list-group-item:first-child {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+}
+.list-group-item:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+}
+.thumbnail p {
+    margin-top: 15px;
+    color: #555;
+}
+.btn {
+    padding: 10px 20px;
+    background-color: #001f3f;
+    color: #7FDBFF;
+    border-radius: 0;
+    transition: .2s;
+}
+.btn:hover, .btn:focus {
+    border: 1px solid #333;
+    background-color: #fff;
+    color: #000;
+}
+.modal-header, h4, .close {
+    background-color: #001f3f;
+    background-image: url(resources/stars2.jpg);
+    color: #fff !important;
+    text-align: center;
+    font-size: 30px;
+}
+.modal-header, .modal-body {
+    padding: 40px 50px;
+}
+.nav-tabs li a {
+    color: #001f3f;
+}
+#googleMap {
+    width: 100%;
+    height: 400px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}  
+.navbar {
+    font-family: Montserrat, sans-serif;
+    margin-bottom: 0;
+    background-color: #2d2d30;
+    border: 0;
+    font-size: 11px !important;
+    letter-spacing: 4px;
+    opacity: 0.9;
+}
+.navbar li a, .navbar .navbar-brand { 
+    color: #01FF70 !important;
+}
+.navbar-nav li a:hover {
+    color: #F012BE !important;
+}
+.navbar-nav li.active a {
+    color: #FFDC00 !important;
+    background-color: #F012BE !important;
+}
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+}
+.open .dropdown-toggle {
+    color: #fff;
+    background-color: #555 !important;
+}
+.dropdown-menu li a {
+    color: #000 !important;
+}
+.dropdown-menu li a:hover {
+    background-color: red !important;
+}
+footer {
+    background-color: #111111;
+    color: #85144b;
+    padding: 32px;
+}
+footer a {
+    color: #f5f5f5;
+}
+footer a:hover {
+    color: #777;
+    text-decoration: none;
+}  
+.form-control {
+    border-radius: 0;
+}
+textarea {
+    resize: none;
+}
+
+.gradient {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#dddddd+20,aaaaaa+83 */
+    background: #dddddd; /* Old browsers */
+    background: -moz-linear-gradient(top,  #dddddd 20%, #aaaaaa 83%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #dddddd 20%,#aaaaaa 83%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #dddddd 20%,#aaaaaa 83%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dddddd', endColorstr='#aaaaaa',GradientType=0 ); /* IE6-9 */
+}
