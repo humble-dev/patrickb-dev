@@ -1,0 +1,134 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 6, 2017, 5:25:38 PM
+    Author     : patrick & several
+*/
+
+
+/* fonts */
+@font-face{
+    font-family: "AtlanticBentley";
+    src: url('fonts/AtlanticBentley.ttf');
+}
+@font-face{
+    font-family: "Porter Sans Inline Block";
+    src: url('fonts/porter-sans-inline-block.ttf')
+}
+
+.atlanticbentley {
+    font-family: "AtlanticBentley", serif;
+}
+.zengo {
+    font-family: "Porter Sans Inline Block", sans-serif;
+}
+
+.anaglyph {
+  color: white;
+  text-shadow: -3px 0px 2px rgb(30,242,241) , 0px -4px 2px rgb(246,5,10) ;
+}
+
+.mywrapper {
+    max-width:100%;
+    border:solid 1px gray;
+
+}
+
+.mywrapper1 {
+    border:solid 1px gray;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.ul1 {
+    list-style-type: none;
+    margin: inherit;
+    padding: inherit;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 45px;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/*.dropdown:hover .dropdown-content {
+    display: block;
+}*/
+
+
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+
+
+
+
+
+/* parallax */
+.parallax { 
+    /* The image used */
+
+
+    /* Set a specific height */
+    min-height: 100%; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.bg1 {
+    background-image: url("images/painting.jpg");
+}
+
+.bg2 {
+    background-image: url("images/painting3.jpg");
+}
+
+
+
+
+
+

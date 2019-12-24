@@ -7,24 +7,13 @@ const Navbar = props => {
   const user = useContext(UserContext);
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top border-bottom border-light">
+    <nav className="navbar navbar-expand navbar-dark bg-transparent fixed-top">
       <div className="container-fluid">
         <Link className="navbar-brand fira" to="/">
           {`{PB}`}
         </Link>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
 
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+        <div className="navbar-collapse" id="navbarSupportedContent">
           {/* <ul className="navbar-nav ml-auto mr-2">
             <li className="nav-item">
               <Link className="nav-link" to="/thoughts">
@@ -70,7 +59,7 @@ const Navbar = props => {
               </button>
             ) : (
               <Link
-                className="btn btn-sm btn-outline-light my-2 my-sm-0"
+                className="btn btn-sm btn-outline-white my-2 my-sm-0"
                 to={{
                   pathname: "/login",
                   state: {

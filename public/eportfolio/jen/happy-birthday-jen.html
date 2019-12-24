@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--
+Patrick Bradshaw 2018, probably.
+-->
+<html>
+    <head>
+        <title>ジェンの誕生日</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/tachyons@4.9.1/css/tachyons.min.css"/>
+        <link rel="stylesheet" type="text/css" href="https://csshake.surge.sh/csshake.min.css">
+        <style>
+            .mixContentContainer {
+                display: none!important;
+            }
+        </style>
+        <script>
+            function myFunction() {
+                var iframe = document.getElementById("myFrame");
+                var elmnt = iframe.contentWindow.document.getElementsByClassName("mixContentContainer");
+                elmnt.style.display = "none";
+            }
+        </script>
+    </head>
+    <body style="background: url(regal.png) repeat" class="center tc p2" onload="myFunction()">
+        <div class="pt3 pb1 pt5-ns" >
+            <img src="star.png" alt="" style="width: 2.5rem" class='shake-slow shake-constant shake-constant--hover' />
+            <img src="muffin.png" alt="b-day cupkek" class='shake-slow shake-constant shake-constant--hover' style="width: 4rem"/>
+            <img src="star.png" alt="" style="width: 2.5rem" class='shake-slow shake-constant shake-constant--hover' />
+        </div>
+        <div style="text-shadow: 6px 6px 0px rgba(0,0,0,0.2);font-size: 2rem" class="center b pt2 pb3 helvetica">
+            ジギー・ジェン・ジェイ</div>
+        <div>
+            <iframe id='myFrame' class='outline b--black shadow-3' src="http://8tracks.com/mixes/8797049/player_v3_universal" width="300" height="300"></iframe>
+
+        </div>
+        <div class="center f7 serif mt3 mh3 ph4 pv3 tj lh-copy i ba bw1 bg-white shadow-3" style='max-width: 400px'>
+            In case my parcel didn't get to you in time, I made you a playlist, and I've
+            posted the .MOBI of this book I started reading that's pretty good. HBD, love you! ~ Bro.
+        </div>
+        <div class='pt3 pb3 sans-serif b ttu'>
+            <a class="f6 link dim ba bw1 ph3 pv2 mb2 dib near-black bg-light-pink shadow-3" href="Zafon, Carlos Ruiz & Graves, Lucia - The Shadow of the Wind, (2004, Penguin Press).mobi"><i class="fas fa-book"></i>&nbsp;The Shadow of the Wind</a>
+        </div>
+        <span class='pa2 f6 helvetica ttu b tracked mid-gray'>
+            25 April 2018
+        </span>
+    </body>
+</html>

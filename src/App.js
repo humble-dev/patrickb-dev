@@ -41,7 +41,7 @@ function App() {
               <ScrollToTop>
                 <main>
                   <Navbar />
-                  <div id="content" style={{ paddingTop: 57 }}>
+                  <div id="content">
                     <Switch>
                       <Route exact path="/">
                         <HomePage />

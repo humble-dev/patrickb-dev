@@ -89,9 +89,10 @@ $info:          $cyan !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
 $light:         $gray-300 !default;
+$lightish:      $gray-200 !default;
 // $dark:          $gray-800 !default;
 $dark:          $black !default;
-$accent:        $black;
+$accent:        lighten(#336F9B, 10%);
 
 // Rustic Rentals
 $rustic-primary: lighten(#8bbabb, 10%);
@@ -108,10 +109,13 @@ $theme-colors: map-merge(
     "warning":    $warning,
     "danger":     $danger,
     "light":      $light,
+    "lightish":   $light,
+    "gray":       $gray-500,
     "dark":       $dark,
     "accent":     $accent,
     "rustic-primary": $rustic-primary,
-    "rustic-dark": $rustic-dark
+    "rustic-dark": $rustic-dark,
+    "white" :     $white
   ),
   $theme-colors
 );

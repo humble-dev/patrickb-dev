@@ -4,10 +4,10 @@ import ProjectList from "./ProjectList";
 
 const ProjectSection = () => {
   return (
-    <section className="bg-light py-5">
+    <section className="bg-lightish py-5">
       <div className="container-fluid">
         <div className="text-center py-5">
-          <h1 className="display-4">Projects</h1>
+          <h2 className="display-4 solway">Featured Projects</h2>
           <p className="lead">
             Here is a short overview of some of the projects I've been a part
             of.
