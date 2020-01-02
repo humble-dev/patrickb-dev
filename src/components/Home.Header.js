@@ -1,6 +1,6 @@
 import React from "react";
 
-import HeaderImg from "../assets/images/pawel-czerwinski-unsplash.jpg";
+import HeaderImg from "../assets/images/mononoke.jpg";
 
 const Header = () => (
   <>
@@ -15,35 +15,44 @@ const Header = () => (
       <header className="w-100">
         <div className="container">
           <div
-            className="row d-md-flex align-items-center"
+            className="row d-md-flex align-items-end"
             style={{ minHeight: "100vh" }}
           >
             <div className="col-12">
-              <div className="py-sm-5 text-center">
-                <h1 className="display-1 mb-4 solway font-weight-bold__ text-white">
+              <div className="py-sm-4 text-sm-left text-center">
+                <h1
+                  className="mb-2 text-shadow fugaz"
+                  style={{ color: "#fff" }}
+                >
                   Patrick Bradshaw
                 </h1>
-                <p className="mb-5 lead text-white">
+                <p className="h5 mb-4 text-white text-shadow font-weight-normal">
                   I develop applications for the web.
                 </p>
-                <div className="">
+                <div className="pb-5 pb-sm-4 pb-m-3">
                   <a
                     href="mailto:hello@patrickb.dev"
-                    className="btn btn-sm_ btn-outline-white mr-2"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-sm btn-dark mr-2"
                   >
-                    Email Me
+                    Email
                   </a>
                   <a
                     href="http://www.linkedin.com/in/grandpatrick"
-                    className="btn btn-sm_ btn-outline-white mr-2"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-sm btn-dark mr-2"
                   >
-                    <i className="fab fa-linkedin" />
+                    LinkedIn
                   </a>
                   <a
                     href="http://www.github.com/humble-dev"
-                    className="btn btn-sm_ btn-outline-white mr-2"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-sm btn-dark mr-2"
                   >
-                    <i className="fab fa-github-alt"></i>
+                    GitHub
                   </a>
                 </div>
               </div>

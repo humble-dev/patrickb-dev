@@ -9,7 +9,7 @@ const Navbar = props => {
   return (
     <nav className="navbar navbar-expand navbar-dark bg-transparent fixed-top">
       <div className="container-fluid">
-        <Link className="navbar-brand fira" to="/">
+        <Link className="navbar-brand fira text-shadow" to="/">
           {`{PB}`}
         </Link>
 
