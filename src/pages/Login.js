@@ -3,6 +3,8 @@ import { Link, withRouter, Redirect } from "react-router-dom";
 import { signInWithEmail } from "../firebase";
 import withUser from "../components/withUser";
 
+import ImgMononoke from "../assets/images/mononoke.jpg";
+
 class LoginPage extends Component {
   state = { email: "", password: "", from: "/", user: null };
 
@@ -43,45 +45,63 @@ class LoginPage extends Component {
     const { user } = this.props;
     if (user) return <Redirect to={{ pathname: from }} />;
 
-    console.log("PROPS", this.props);
-    console.log("STATE", this.state);
+    // console.log("PROPS", this.props);
+    // console.log("STATE", this.state);
 
     return (
-      <section className="container py-5">
-        <div className="mx-auto" style={{ maxWidth: 440 }}>
-          <div className="p-3 p-md-4 border rounded-lg">
-            <h1 className="h3 mb-4">Sign In</h1>
-            <form className="Login" onSubmit={this.handleSubmit}>
-              <div className="form-group">
-                <label htmlFor="email">Email address</label>
-                <input
-                  type="email"
-                  name="email"
-                  className="form-control"
-                  id="email"
-                  autoComplete="on"
-                  value={email}
-                  onChange={this.handleChange}
-                />
-                {/* <small id="emailHelp" className="form-text text-muted">
+      <div
+        className="w-100"
+        style={{
+          background: `url(${ImgMononoke}) no-repeat`,
+          backgroundPositionX: "53%",
+          backgroundPositionY: "50%",
+          backgroundSize: "cover",
+          backgroundAttachment: "fixed",
+          height: "100vh"
+        }}
+      >
+        <section
+          className="container py-5"
+          style={{
+            position: "relative",
+            top: "50%",
+            transform: "translateY(-50%)"
+          }}
+        >
+          <div className="mx-auto" style={{ maxWidth: 440 }}>
+            <div className="p-3 p-md-4 border rounded-lg bg-white">
+              <h1 className="h3 mb-4 text-center fugaz">Sign In</h1>
+              <form className="Login" onSubmit={this.handleSubmit}>
+                <div className="form-group">
+                  <label htmlFor="email">Email address</label>
+                  <input
+                    type="email"
+                    name="email"
+                    className="form-control"
+                    id="email"
+                    autoComplete="on"
+                    value={email}
+                    onChange={this.handleChange}
+                  />
+                  {/* <small id="emailHelp" className="form-text text-muted">
                 We'll never share your email with anyone else.
               </small> */}
-              </div>
-              <div className="form-group">
-                <label htmlFor="password">Password</label>
-                <input
-                  type="password"
-                  className="form-control"
-                  name="password"
-                  id="password"
-                  autoComplete="on"
-                  value={password}
-                  onChange={this.handleChange}
-                />
-              </div>
+                </div>
+                <div className="form-group">
+                  <label htmlFor="password">Password</label>
+                  <input
+                    type="password"
+                    className="form-control"
+                    name="password"
+                    id="password"
+                    autoComplete="on"
+                    value={password}
+                    onChange={this.handleChange}
+                  />
+                </div>
 
-              <div className="pt-3 text-center">
-                {/* <button
+                <div className="pt-3 text-center">
+                  {/* <button
                   type="submit"
                   className="btn btn-primary btn-block mb-2"
                   onClick={() => {
@@ -92,17 +112,18 @@ class LoginPage extends Component {
                 >
                   Sign In
                 </button> */}
-                <button type="submit" className="btn btn-dark btn-block mb-2">
-                  Sign In
-                </button>
-                <Link to="/" className="btn btn-outline-dark small btn-block">
-                  Back to home page
-                </Link>
-              </div>
-            </form>
+                  <button type="submit" className="btn btn-dark btn-block mb-2">
+                    Sign In
+                  </button>
+                  <Link to="/" className="btn btn-outline-dark small btn-block">
+                    Back to home page
+                  </Link>
+                </div>
+              </form>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     );
   }
 }

@@ -1,12 +1,16 @@
 import React from "react";
 
-import HeaderImg from "../assets/images/mononoke.jpg";
+import ImgMononoke from "../assets/images/mononoke.jpg";
+// import HeaderImg from "../assets/images/reef-3.jpeg";
+// import Bg3 from "../assets/images/reef-bw.jpeg";
 
 const Header = () => (
   <>
     <div
       style={{
-        background: `url(${HeaderImg}) no-repeat center`,
+        background: `url(${ImgMononoke}) no-repeat`,
+        backgroundPositionX: "53%",
+        backgroundPositionY: "50%",
         backgroundSize: "cover",
         backgroundAttachment: "fixed",
         height: "100vh"
@@ -16,7 +20,7 @@ const Header = () => (
         <div className="container">
           <div
             className="row d-md-flex align-items-end"
-            style={{ minHeight: "100vh" }}
+            style={{ minHeight: "95vh" }}
           >
             <div className="col-12">
               <div className="py-sm-4 text-sm-left text-center">
@@ -34,7 +38,7 @@ const Header = () => (
                     href="mailto:hello@patrickb.dev"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn btn-sm btn-dark mr-2"
+                    className="btn btn-sm btn-dark mr-2 shadow"
                   >
                     Email
                   </a>
@@ -42,7 +46,7 @@ const Header = () => (
                     href="http://www.linkedin.com/in/grandpatrick"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn btn-sm btn-dark mr-2"
+                    className="btn btn-sm btn-dark mr-2 shadow"
                   >
                     LinkedIn
                   </a>
@@ -50,7 +54,7 @@ const Header = () => (
                     href="http://www.github.com/humble-dev"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn btn-sm btn-dark mr-2"
+                    className="btn btn-sm btn-dark mr-2 shadow"
                   >
                     GitHub
                   </a>

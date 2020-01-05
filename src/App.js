@@ -8,6 +8,7 @@ import UserProvider from "./providers/UserProvider";
 import ThoughtsProvider from "./providers/ThoughtsProvider";
 import BlocksProvider from "./providers/BlocksProvider";
 import ScrollToTop from "./components/scrollToTop";
+import FlashcardsProvider from "./providers/FlashcardProvider";
 
 import Navbar from "./components/Navbar"; // eslint-disable-line no-use-before-define
 import Footer from "./components/Footer";
@@ -20,8 +21,10 @@ import ThoughtStreamPage from "./pages/ThoughtStream";
 import BlockStream from "./pages/BlockStream";
 import ExperimentView from "./pages/Experiment.View";
 
-import FarmTable1 from "./pages/farmtables/farmtable1";
 import RusticRentals from "./pages/farmtables/RusticRentals";
+
+import FlashcardPage from "./comptia_flashcards/FlashcardPage";
+// import CardList from "./comptia_flashcards/CardList";
 
 function App() {
   return (
@@ -30,7 +33,6 @@ function App() {
         <BlocksProvider>
           <ThoughtsProvider>
             <Switch>
-              <Route path="/farmtables" component={FarmTable1} />
               <Route path="/rusticrentals" component={RusticRentals} />
               <Route path="/experiments" component={ExperimentView} />
 
@@ -43,6 +45,12 @@ function App() {
                   <Navbar />
                   <div id="content">
                     <Switch>
+                      <Route path="/flashcards">
+                        <FlashcardsProvider>
+                          <FlashcardPage />
+                        </FlashcardsProvider>
+                      </Route>
+
                       <Route exact path="/">
                         <HomePage />
                       </Route>

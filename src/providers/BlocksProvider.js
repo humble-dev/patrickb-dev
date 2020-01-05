@@ -28,7 +28,7 @@ class BlocksProvider extends Component {
     const { blocks } = this.state;
     const { children } = this.props;
 
-    console.log("BLOCKSPRO", blocks);
+    // console.log("BLOCKSPRO", blocks);
 
     return (
       <BlocksContext.Provider value={blocks}>{children}</BlocksContext.Provider>

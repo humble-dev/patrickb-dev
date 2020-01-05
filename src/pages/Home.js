@@ -16,10 +16,11 @@ const HomePage = () => (
     <div className="shadow-lg" style={{ zIndex: 1 }}>
       <ProjectSection />
     </div>
+
     <section
       className="py-5 px-4"
       style={{
-        background: `url(${Background}) repeat`,
+        background: `url(${Background})`,
         backgroundAttachment: "fixed"
       }}
     >
@@ -47,8 +48,7 @@ const HomePage = () => (
                 I am a software developer experienced in JavaScript (React),
                 C#/.NET, Java, and PHP, and SQL. I love building games and
                 applications that simplify certain aspects of life. I currently
-                go to school at Western Governors University for software
-                development.
+                study software development at Western Governors University.
               </p>
               <p className="mb-0">
                 Outside of programming I like to{" "}
