@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import "./App.scss";
 import "./assets/fontawesome/css/all.css";
+import { Scrollbars } from "react-custom-scrollbars";
 
 import { ProtectedRoute } from "./components/ProtectedRoute";
 import UserProvider from "./providers/UserProvider";
@@ -9,6 +10,7 @@ import ThoughtsProvider from "./providers/ThoughtsProvider";
 import BlocksProvider from "./providers/BlocksProvider";
 import ScrollToTop from "./components/scrollToTop";
 import FlashcardsProvider from "./providers/FlashcardProvider";
+import IchingProvider from "./providers/IchingProvider";
 
 import Navbar from "./components/Navbar"; // eslint-disable-line no-use-before-define
 import Footer from "./components/Footer";
@@ -26,6 +28,9 @@ import RusticRentals from "./pages/farmtables/RusticRentals";
 import FlashcardPage from "./comptia_flashcards/FlashcardPage";
 // import CardList from "./comptia_flashcards/CardList";
 
+import IchingPage from "./iching/iching.page";
+import Blank from "./iching/blank";
+
 function App() {
   return (
     <BrowserRouter>
@@ -40,38 +45,52 @@ function App() {
                 <LoginPage />
               </Route>
 
+              <Route path="/blank">
+                <Blank />
+              </Route>
+
               <ScrollToTop>
                 <main>
-                  <Navbar />
-                  <div id="content">
-                    <Switch>
-                      <Route path="/flashcards">
-                        <FlashcardsProvider>
-                          <FlashcardPage />
-                        </FlashcardsProvider>
-                      </Route>
+                  <Scrollbars style={{ height: "100vh" }}>
+                    <Navbar />
 
-                      <Route exact path="/">
-                        <HomePage />
-                      </Route>
+                    <div id="content">
+                      <Switch>
+                        <Route exact path="/">
+                          <HomePage />
+                        </Route>
 
-                      <Route path="/blocks">
-                        <BlockStream />
-                      </Route>
+                        <Route path="/flashcards">
+                          <FlashcardsProvider>
+                            <FlashcardPage />
+                          </FlashcardsProvider>
+                        </Route>
 
-                      <Route path="/thoughts">
-                        <ThoughtStreamPage />
-                      </Route>
+                        <IchingProvider>
+                          <ProtectedRoute
+                            path="/iching"
+                            component={IchingPage}
+                          />
+                        </IchingProvider>
 
-                      <ProtectedRoute
-                        path="/protected"
-                        component={ProtectedPage}
-                      />
+                        <Route path="/blocks">
+                          <BlockStream />
+                        </Route>
 
-                      <ProtectedRoute path="/admin" component={AdminPage} />
-                    </Switch>
-                  </div>
-                  <Footer />
+                        <Route path="/thoughts">
+                          <ThoughtStreamPage />
+                        </Route>
+
+                        <ProtectedRoute
+                          path="/protected"
+                          component={ProtectedPage}
+                        />
+
+                        <ProtectedRoute path="/admin" component={AdminPage} />
+                      </Switch>
+                    </div>
+                    <Footer />
+                  </Scrollbars>
                 </main>
               </ScrollToTop>
             </Switch>

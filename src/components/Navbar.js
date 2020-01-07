@@ -45,6 +45,21 @@ const Navbar = props => {
               </div>
             </li>
           </ul> */}
+          {user ? (
+            <ul className="navbar-nav">
+              <li className="nav-item">
+                <Link className="nav-link" to="/iching">
+                  I Ching
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/flashcards">
+                  Flashcards
+                </Link>
+              </li>
+            </ul>
+          ) : null}
+
           <form className="form-inline ml-auto">
             {user ? (
               <button
