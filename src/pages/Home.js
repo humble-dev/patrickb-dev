@@ -4,7 +4,7 @@ import React from "react";
 // import FlameDesign from "../assets/images/flame-design-science.png";
 // import FlameUpgrade from "../assets/images/flame-upgrade.png";
 
-import ProfilePic from "../assets/images/storier-shirt.jpg";
+import ProfilePic from "../assets/images/pbradshaw.jpg";
 import Background from "../assets/images/pattern_alchemy.gif";
 
 import Header from "../components/Home.Header";
@@ -13,9 +13,7 @@ import ProjectSection from "../components/Home.Projects";
 const HomePage = () => (
   <>
     <Header />
-    <div className="shadow-lg" style={{ zIndex: 1 }}>
-      <ProjectSection />
-    </div>
+    <ProjectSection />
 
     <section
       className="py-5 px-4"
@@ -30,7 +28,7 @@ const HomePage = () => (
       >
         <div className="row d-sm-flex">
           <div className="col-sm-3 self-align-stretch align-items-center">
-            <div className="text-center my-4 my-sm-0 p-3">
+            <div className="text-center mb-2 my-sm-0 p-3">
               <img
                 src={ProfilePic}
                 alt=""
@@ -40,23 +38,26 @@ const HomePage = () => (
             </div>
           </div>
           <div className="col-sm-9 d-flex self-align-stretch align-items-center">
-            <div className="pr-sm-3">
-              <h2 className="mb-3 h4 fugaz text-center text-sm-left">
+            <div className="pr-sm-2">
+              <h2 className="mb-3 fugaz text-center text-sm-left h2">
                 About Myself
               </h2>
               <p>
-                I am a software developer experienced in JavaScript (React),
-                C#/.NET, Java, and PHP, and SQL. I love building games and
-                applications that simplify certain aspects of life. I currently
-                study software development at Western Governors University.
+                I am a software developer experienced in React, C#/.NET, and
+                SQL. I love building tools. I currently study software
+                development at Western Governors University.
               </p>
               <p className="mb-0">
                 Outside of programming I like to{" "}
                 <a href="https://patrickbradshaw.bandcamp.com/">
                   make music on guitar
                 </a>
-                , stargaze, play videogames, and draw. I live near Portland with
-                my wife and her family family and lots of animals.
+                , stargaze, play videogames, write and draw. I live near
+                Portland with my{" "}
+                <a href="https://www.youtube.com/user/WeeKid1675">
+                  wonderful wife
+                </a>{" "}
+                and her amazing family and lots and lots of animals.
               </p>
             </div>
           </div>

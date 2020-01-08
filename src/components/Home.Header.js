@@ -9,7 +9,7 @@ const Header = () => (
     <div
       style={{
         background: `url(${ImgMononoke}) no-repeat`,
-        backgroundPositionX: "53%",
+        backgroundPositionX: "50%",
         backgroundPositionY: "50%",
         backgroundSize: "cover",
         backgroundAttachment: "fixed",
@@ -25,7 +25,7 @@ const Header = () => (
             <div className="col-12">
               <div className="py-sm-4 text-sm-left text-center">
                 <h1
-                  className="mb-2 text-shadow fugaz"
+                  className="mb-2 text-shadow fugaz h1"
                   style={{ color: "#fff" }}
                 >
                   Patrick Bradshaw
