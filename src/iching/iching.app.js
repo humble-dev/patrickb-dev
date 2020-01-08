@@ -34,17 +34,15 @@ class IchingApp extends Component {
       result
     };
 
-    console.log("query", query);
-    console.log("arr", query.result.toString());
-
     firestore.collection("iching_queries").add(query);
 
     this.setState({
+      question: "",
       result
     });
 
-    document.getElementById("QuestionForm").classList.add("d-none");
-    document.getElementById("ResponsePanel").classList.remove("d-none");
+    // document.getElementById("QuestionForm").classList.add("d-none");
+    // document.getElementById("ResponsePanel").classList.remove("d-none");
   };
 
   // handleGo = () => {
@@ -117,12 +115,6 @@ class IchingApp extends Component {
             <button className="btn btn-dark" type="submit">
               Submit
             </button>
-            {/* <button
-              className="ml-2 btn btn-outline-dark"
-              onClick={this.handleGo}
-            >
-              Go
-            </button> */}
           </form>
         </div>
 

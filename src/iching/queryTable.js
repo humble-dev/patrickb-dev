@@ -23,7 +23,7 @@ const IchingQueryTable = () => {
             <th>Hex 1</th>
             <th>Changes</th>
             <th>Hex 2</th>
-            <th>Actions</th>
+            {/* <th>Actions</th> */}
           </tr>
         </thead>
         {queries ? (
@@ -62,14 +62,14 @@ const IchingQueryTable = () => {
                     "None"
                   )}
                 </td>
-                <td>
+                {/* <td>
                   <div>
                     <button className="btn btn-sm btn-primary mr-1">
                       Add Notes
                     </button>
                     <button className="btn btn-sm btn-danger">Delete</button>
                   </div>
-                </td>
+                </td> */}
               </tr>
             ))}
           </tbody>
